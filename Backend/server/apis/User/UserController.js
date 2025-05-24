@@ -1,4 +1,4 @@
-const UserModel = require("../User/UserModel")
+const UserModel = require("./UserModel")
 const bcryptjs=require("bcryptjs")
 const jwt=require("jsonwebtoken")
 const SECRET="MyProject@123"

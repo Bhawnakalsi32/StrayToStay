@@ -8,17 +8,17 @@ app.use(express.json({limit:"40mb"}))
 require("dotenv").config()
 
 // app.use(express.static("./server/public/"))
- const api=require("./routes/ApiRoutes")
+ const api=require("./server/routes/ApiRoutes")
 app.use("/api", api)
-const admin=require("./routes/AdminRoutes")
+const admin=require("./server/routes/AdminRoutes")
 app.use("/admin", admin)
-const volunteer=require("./routes/VolunteerRoutes")
+const volunteer=require("./server/routes/VolunteerRoutes")
 app.use("/volunteer", volunteer)
-const ngo=require("./routes/NgoRoutes")
+const ngo=require("./server/routes/NgoRoutes")
 app.use("/ngo", ngo)
 
-const db=require("./config/db")
-const seed=require("./config/seed")
+const db=require("./server/config/db")
+const seed=require("./server/config/seed")
 app.listen(process.env.PORT,()=>{
     console.log("SERVER is running at ", process.env.PORT);
 })
