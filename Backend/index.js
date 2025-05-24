@@ -23,7 +23,7 @@ app.listen(process.env.PORT,()=>{
     console.log("SERVER is running at ", process.env.PORT);
 })
 
-app.post("/",(req,res)=>{
+app.get("/",(req,res)=>{
     res.json({ 
         status:200,
         success:true, 
